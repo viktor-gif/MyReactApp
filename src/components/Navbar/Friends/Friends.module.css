@@ -1,0 +1,26 @@
+.myFriends {
+    margin-top: 50px;
+    background-color: rgb(179, 149, 149);
+    padding: 10px;
+}
+.friends {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.myFriends h2 {
+    text-align: center;
+    color: grey;
+    margin: 0;
+}
+.friendsInfo {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 15px;
+    color: rgb(41, 41, 117);
+}
+.friendsCount {
+
+}
