@@ -17,6 +17,9 @@
 .messages {
   color: white;
 }
+.messages textarea{
+  width: 99.5%;
+}
 .message {
 
 }

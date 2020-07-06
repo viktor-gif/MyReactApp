@@ -4,7 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const Message = (props) => {
 
-  return <div className={s.message}>{props.message}</div>;
+  return (
+    <div className={s.message}>{props.message}</div>
+  );
 };
 
 

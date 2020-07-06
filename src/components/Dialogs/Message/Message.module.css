@@ -1,8 +1,11 @@
 .message {
     
     margin: 10px;
+    margin-left: 0;
     padding: 20px;
+    
     background-color: green;
-    max-width: 100px;
+    max-width: 300px;
+    
     border-radius: 0 10px 10px 10px;
 }
