@@ -10,10 +10,12 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
 const App = (props) => {
+  
+  
   return (
     <div className="app-wrapper">
       <Header />
-      <Navbar state={props.state.sidebar} />
+      <Navbar sidebar={props.state.sidebar} />
 
       <div className="app-wrapper-content">
         {/* <Route path='/dialogs' component={Dialogs} />
