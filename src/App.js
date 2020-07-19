@@ -15,7 +15,7 @@ const App = (props) => {
   return (
     <div className="app-wrapper">
       <Header />
-      <Navbar sidebar={props.store.getState().sidebar} />
+      <Navbar sidebar={props.state.sidebar} />
 
       <div className="app-wrapper-content">
         
