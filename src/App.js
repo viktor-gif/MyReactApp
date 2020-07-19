@@ -18,14 +18,12 @@ const App = (props) => {
       <Navbar sidebar={props.state.sidebar} />
 
       <div className="app-wrapper-content">
-        {/* <Route path='/dialogs' component={Dialogs} />
-          <Route path='/profile' component={Profile} /> */}
+        
 
         <Route
           path="/dialogs"
           render={() => <Dialogs 
-            dialogsPage={props.state.dialogsPage}
-            dispatch={props.dispatch} />}
+            store={props.store} />}
         />
         <Route
           path="/profile"
