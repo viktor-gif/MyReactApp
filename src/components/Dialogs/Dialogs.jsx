@@ -7,7 +7,7 @@ import { sendMessageCreator, updateNewMessageChangeBodyCreator } from "../../Red
 
 const Dialogs = (props) => {
 
-  let dialogsPage = props.store.getState().dialogsPage;
+  let dialogsPage = props.dialogsPage;
 
   let dialogsElements = dialogsPage.dialogs.map((d) => (
     <DialogItem name={d.name} id={d.id} source={d.source} />
@@ -20,13 +20,14 @@ const Dialogs = (props) => {
   let newMessageBody = dialogsPage.newMessageBody;
 
   let addMessage = () => {
-    props.store.dispatch(sendMessageCreator());
+    props.sendMessage();
   };
   
   let onMessageChange = (e) => {
     let text = e.target.value;
-    let action = updateNewMessageChangeBodyCreator(text);
-    props.store.dispatch(action);
+    props.updateNewMessageBody(text)
+    // let action = updateNewMessageChangeBodyCreator(text);
+    // props.store.dispatch(action);
   };
   
   
