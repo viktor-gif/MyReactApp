@@ -56,7 +56,7 @@ export const addPostActionCreator = () => {
 
   //thunk
   export const getUserProfile = (userId) => (dispatch) => {
-    debugger;
+
     
     usersAPI.getProfile(userId)
         .then(response => {
