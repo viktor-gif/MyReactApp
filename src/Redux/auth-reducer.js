@@ -1,4 +1,4 @@
-import { usersAPI, authAPI } from "../api/api";
+import { authAPI } from "../api/api";
 
 const SET_USER_DATA = "SET_USER_DATA";
 
@@ -29,8 +29,7 @@ export const setAuthUserData = (userId, email, login) => ({
 });
 
 //thunks
-export const getAuthUserData = () => {
-  return (dispatch) => {
+export const getAuthUserData = () => (dispatch) => {
     
     authAPI.me()
         .then(response => {
@@ -39,7 +38,7 @@ export const getAuthUserData = () => {
                 dispatch(setAuthUserData(id, email, login));
             }
         });
-  };
-};
+  }
+
 
 export default authReducer;
