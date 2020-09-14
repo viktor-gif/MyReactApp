@@ -5,6 +5,7 @@ import { required, minLengthCreator } from '../../utils/validators/validators';
 import { connect } from 'react-redux';
 import { login } from '../../Redux/auth-reducer'
 import { Redirect } from 'react-router-dom';
+import s from '../common/FormsControl/FormsControl.module.css';
 
 const minLength5 = minLengthCreator(5);
 
@@ -24,6 +25,9 @@ const LoginForm = (props) => {
                 <Field component={Input} name={'rememberMe'} 
                     type={'checkbox'} /> remember me 
             </div>
+            {props.error && <div className={s.fromSummeryError}>
+                {props.error}
+            </div>}
             <div>
                 <button>Login</button>
             </div>
