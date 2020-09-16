@@ -12,7 +12,7 @@ const Post = (props) => {
       <div className={s.item}>
       <span>like </span>{ props.likesCount }
       <button>
-        <img src="https://w7.pngwing.com/pngs/245/299/png-transparent-heart-others-love-heart-%D1%81%D0%B5%D1%80%D0%B4%D0%B5%D1%87%D0%BA%D0%BE-thumbnail.png" />
+        <img src="https://www.clipartkey.com/mpngs/m/278-2785465_heart-clipart-jpeg-red-heart-emoji-png.png" />
       </button>
     </div>
     </div>
