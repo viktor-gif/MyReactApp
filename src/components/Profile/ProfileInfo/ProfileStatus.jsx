@@ -1,5 +1,4 @@
 import React from "react";
-import { compose } from "redux";
 
 class ProfileStatus extends React.Component {
   state = {
