@@ -11,19 +11,21 @@ import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/login/Login";
 import { connect } from "react-redux";
-import { initializeApp } from './Redux/app-reducer';
+import { initializeApp } from "./Redux/app-reducer";
 import { compose } from "redux";
 import Preloader from "./components/common/preloader/preloader";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./Redux/redux-store";
 
 class App extends Component {
-
   componentDidMount() {
-    this.props.initializeApp();        
+    this.props.initializeApp();
   }
 
   render() {
-    if(!this.props.initialized) {
-      return <Preloader />
+    if (!this.props.initialized) {
+      return <Preloader />;
     }
     return (
       <div className="app-wrapper">
@@ -45,9 +47,10 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  initialized: state.app.initialized
+  initialized: state.app.initialized,
 });
 
-export default compose (
+export default compose(
   withRouter,
-  connect(mapStateToProps, {initializeApp})) (App);
+  connect(mapStateToProps, { initializeApp })
+)(App);
