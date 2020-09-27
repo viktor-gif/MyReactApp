@@ -14,9 +14,6 @@ import { connect } from "react-redux";
 import { initializeApp } from "./Redux/app-reducer";
 import { compose } from "redux";
 import Preloader from "./components/common/preloader/preloader";
-import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
-import store from "./Redux/redux-store";
 
 class App extends Component {
   componentDidMount() {
