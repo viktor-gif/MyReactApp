@@ -18,7 +18,7 @@ let initialState = {
   followingInProgress: [],
   fake: 10,
 };
-console.log(initialState);
+// console.log(initialState);
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
     case FOLLOW:

@@ -1,6 +1,3 @@
-import { Field } from "redux-form";
-import React from "react";
-
 export const updateObjectInArray = (
   items,
   itemId,
@@ -14,23 +11,3 @@ export const updateObjectInArray = (
     return u;
   });
 };
-
-export const createField = (
-  placeholder,
-  name,
-  validators,
-  component,
-  props = {},
-  text = ""
-) => (
-  <div>
-    <Field
-      placeholder={placeholder}
-      name={name}
-      validate={validators}
-      component={component}
-      {...props}
-    />{" "}
-    {text}
-  </div>
-);

@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { login } from "../../Redux/auth-reducer";
 import { Redirect } from "react-router-dom";
 import s from "../common/FormsControl/FormsControl.module.css";
-import { createField } from "../../utils/object-helpers";
+import { createField } from "../common/FormsControl/FormsControl";
 
 const minLength5 = minLengthCreator(5);
 
@@ -19,9 +19,16 @@ const LoginForm = ({ handleSubmit, error }) => {
       {createField("password", "password", [required, minLength5], Input, {
         type: "password",
       })}
-      {createField(null, "rememberMe", [], Input, {
-        type: "checkbox",
-      }, "remember me")}
+      {createField(
+        null,
+        "rememberMe",
+        [],
+        Input,
+        {
+          type: "checkbox",
+        },
+        "remember me"
+      )}
       {/* <div>
         <Field component={Input} name={'email'} 
                     validate={[required]} placeholder={'E-mail'}

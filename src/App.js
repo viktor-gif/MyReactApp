@@ -42,7 +42,10 @@ class App extends Component {
 
         <div className="app-wrapper-content">
           <Route path="/dialogs" render={withSuspense(DialogsContainer)} />
-          <Route path="/profile" render={withSuspense(ProfileContainer)} />
+          <Route
+            path="/profile/:userId?"
+            render={withSuspense(ProfileContainer)}
+          />
           <Route path="/users" render={() => <UsersContainer />} />
           <Route path="/login" render={() => <Login />} />
           <Route path="/news" render={() => <News />} />
